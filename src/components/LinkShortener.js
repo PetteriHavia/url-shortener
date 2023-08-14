@@ -38,6 +38,7 @@ const LinksShortener = () => {
 
   //API result JSX
   const ShowResults = ({ link, setErrorMessage, setCopied }) => {
+
     const handleCopyToClipboard = () => {
       const textToCopy = link.result.short_link;
       navigator.clipboard.writeText(textToCopy).then(
@@ -55,7 +56,7 @@ const LinksShortener = () => {
           <ShortLinkBox>
             <h3>{link.result.short_link}</h3>
             <CopyButton onClick={handleCopyToClipboard}>
-              <FaClipboardList /> Copy Link
+              <FaClipboardList /> {copied ? "Copied!" : "Copy Link" }
             </CopyButton>
           </ShortLinkBox>
     );

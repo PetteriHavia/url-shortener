@@ -14,6 +14,21 @@ export const InnerContainer = styled.div`
   align-items: center;
   flex: 1;
   margin: 1rem 0rem 2rem 0rem;
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
 `;
 
 //--------IMAGE-SECTION---------//
@@ -24,12 +39,14 @@ export const HeroImage = styled.div`
   img {
     width: 90%;
   }
+  @media (max-width: 768px) {
+   justify-content: center;
+   margin-top: 3rem;
+  }
 `;
 
 export const HeroText = styled.div`
   flex-basis: 65%;
-  h1 {
-  }
   h3 {
     font-weight: 400;
     color: hsl(260, 5%, 53%);
@@ -51,6 +68,7 @@ export const InputInnerContainer = styled.div`
   padding: 1.5rem;
   border-radius: 8px;
   background-color: #eff1f7;
+  margin-top: 2rem;
 
   input {
     width: 75%;
@@ -59,10 +77,19 @@ export const InputInnerContainer = styled.div`
     border-radius: 8px;
     border: none;
   }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    
+    input{
+      width: 100%;
+    }
+  }
 `;
 
 export const ActionButton = styled.button`
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0rem;
   background: none;
   background-color: #30c59b;
   color: white;
@@ -71,9 +98,16 @@ export const ActionButton = styled.button`
   font-size: 1.2rem;
   margin-left: 1rem;
   border-radius: 8px;
+  width: 180px;
 
-  &:hover{
+  &:hover {
     background-color: #269e7c;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 1rem;
+    margin-left: 0rem;
+    padding: 1rem 0rem;
   }
 `;
 
@@ -87,6 +121,10 @@ export const ShortLinkBox = styled(InputInnerContainer)`
 `;
 
 export const CopyButton = styled(ActionButton)`
-  padding: 1rem 1.8rem;
-  margin:0rem;
+  padding: 1rem 0rem;
+  margin: 0rem;
+
+  @media (max-width: 600px) {
+    margin-top: 1rem;
+  }
 `;
